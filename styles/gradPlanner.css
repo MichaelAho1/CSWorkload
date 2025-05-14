@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    text-align: center;
+    color: black;
+}
+
+.card-title {
+    background-color: #4B0082;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.schedule-item {
+    font-size: 1.3rem;
+    padding: 20px;
+}
+  
+.card h2 {
+    margin: 0; 
+}
+  
+.card {
+    width: 50rem;
+}
+
+
+.modal-header {
+    background-color: #4B0082;
+}
+  
+#gradPlanModalBtn, #exportButton {
+    background-color: #4B0082;
+    color: white;
+    border-radius: 10px;
+}
+
+#completedClassList {
+    max-height: 260px;
+    overflow-y: auto;
+}
+
+#classModalButton {
+    background-color: #4B0082;
+    color: white;
+    border-radius: 10px;
+}
+
+.text-center {
+    color:#4B0082;
+}
+
+.text-white {
+    background-color: #4B0082;
+}
+
+.btn-close {
+    border: none;
+    background-color: white;
+    color: rgb(107, 0, 0);
+}
+
+#GradPlanPreferencesCard {
+    margin-bottom: 100px;
+}
+
+.input-group-text.same-width {
+    width: 500px; 
+}
+
+/* For Smaller Screens adjust card size and font sizing*/
+@media (max-width: 768px) { 
+    .card {
+        width: 25rem;
+    }
+    .schedule-item {
+        font-size: 0.9rem;
+    }
+    .input-group-prepend {
+        font-size: .5rem;
+    }
+    .card-title {
+        font-size: 1.1rem;
+    }
+  
+    .input-group-text, .form-control {
+        font-size: .5rem;
+    }
+
+    .input-group-text.same-width {
+        width: 300px; 
+    }
+  
+    .form-control {
+        padding: 0.5rem 0.75rem;
+    }
+
+    #prefenceSemesters, #prefenceClasses {
+        font-size: .84rem;
+    }
+}

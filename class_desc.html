@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>CS Workload</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="./styles/classDescriptions.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #E6D8AD;
+      }
+      .navbar-brand {
+        font-size: 2.5rem;
+      }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">CS Workload</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="grad_planner.html">Graduation Planner</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="class_desc.html">Class Information</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <header>
+      <h1 class="title">JMU CS Class Descriptions</h1>
+    </header>
+
+    <section class="class-list">
+        <div class="card">
+            <h2 class="class-item-name">Intro To Programming | CS 149</h2>
+            <h3 class="class-description"><span class="span-green">Easy</span> | <span class="class-language">Python</span> | <span class="span-green">4 hours/week</span></h3>
+            <h4 class="proffesor border-top">Professor: Wang</h4>
+            <p>Pretty easy class that requires minimal studying. Coding projects are decently hard and will take up the majority of the class.</p>
+            <div class="d-flex justify-content-between border-top">
+              <h5 class="prereqs m-2">Prerequisites: None</h5>
+              <a class="link m-1" href="https://w3.cs.jmu.edu/mayfiecs/cs149/syllabus/">Syllabus</a>
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="class-item-name">Advanced Programming | CS159</h2>
+            <h3 class="class-description"><span class="span-yellow">Medium</span> | <span class="class-language">Java</span> | <span class="span-yellow">6 hours/week</span></h3>
+            <h4 class="proffesor border-top">Professor: Wang</h4>
+            <p>The midterms and final are the hardest part of the class. Projects are time-consuming but not as difficult as future classes.</p>
+            <div class="d-flex justify-content-between border-top">
+              <h5 class="prereqs m-2">Prerequisites: CS149</h5>
+              <a class="link m-1" href="https://w3.cs.jmu.edu/mayfiecs/cs159/syllabus/">Syllabus</a>
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="class-item-name">Algorithms and Data Structure | CS240</h2>
+            <h3 class="class-description"><span class="span-red">Hard</span> | <span class="class-language">Java</span> | <span class="span-yellow">7 hours/week</span></h3>
+              <h4 class="proffesor border-top">Professor: Wang</h4>
+              <p>Tests were pretty difficult just make sure to do the labs and study. 4 projects that were very time-consuming and difficult.</p>
+            <div class="d-flex justify-content-between border-top">
+              <h5 class="prereqs m-2">Prerequisites: CS227, Math231, CS159</h5>
+              <a class="link m-1" href="https://w3.cs.jmu.edu/spragunr/CS240/syllabus.shtml">Syllabus</a>
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="class-item-name">Software Engineering | CS345</h2>
+            <h3 class="class-description"><span class="span-red">Hard</span> | <span class="class-language">Java</span> | <span class="span-red">10 hours/week</span></h3>
+              <h4 class="proffesor border-top">Professor: Bernstein</h4>
+              <p>The first half of the semester was heavy with homework(15 hours each) and tough tests. The second half was easier, focused on a fun group project.</p>
+            <div class="d-flex justify-content-between border-top">
+              <h5 class="prereqs m-2">Prerequisites: CS159</h5>
+              <a class="link m-1" href="https://w3.cs.jmu.edu/bernstdh/Web/CS345/index.php">Syllabus</a>
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="class-item-name">Discrete Structures I | CS227</h2>
+            <h3 class="class-description"><span class="span-green">Easy</span> | <span class="class-language">Math</span> | <span class="span-green">2 hours/week</span></h3>
+              <h4 class="proffesor border-top">Professor: Duncan</h4>
+              <p>Pretty easy class that requires minimal studying. Coding projects are decently hard and will take up the majority of the class.</p>
+            <div class="d-flex justify-content-between border-top">
+              <h5 class="prereqs m-2">Prerequisites: CS149</h5>
+              <a class="link m-1" href="https://catalog.jmu.edu/preview_course_nopop.php?catoid=54&coid=290174">Description</a>
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="class-item-name">Computer Systems I | CS261</h2>
+            <h3 class="class-description"><span class="span-red">Hard</span> | <span class="class-language">C</span> | <span class="span-red">8 hours/week</span></h3>
+              <h4 class="proffesor border-top">Professor: Lam</h4>
+              <p>Classes are group labs and there are 2 lectures every week that are videos. Tests are hard same with the projects after the first one.</p>
+            <div class="d-flex justify-content-between border-top">
+              <h5 class="prereqs m-2">Prerequisites: CS227, CS159</h5>
+              <a class="link m-1" href="https://w3.cs.jmu.edu/lam2mo/cs261/syllabus.html">Syllabus</a>
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="class-item-name">Application Development | CS343</h2>
+            <h3 class="class-description"><span class="span-yellow">Medium</span> | <span class="class-language">JavaScript</span> | <span class="span-yellow">5 hours/week</span></h3>
+              <h4 class="proffesor border-top">Professor: Stewart</h4>
+              <p>Classes are either doing labs or a quick lecture. Lots of hws/Labs and 1 final project split up into 3 parts. Great class to take if you are interested in web development.</p>
+            <div class="d-flex justify-content-between border-top">
+              <h5 class="prereqs m-2">Prerequisites: CS159</h5>
+              <a class="link m-1" href="https://w3.cs.jmu.edu/mayfiecs/cs343/syllabus/">Syllabus</a>
+            </div>
+          </div>
+        <div class="card">
+          <h2 class="class-item-name">Calculus 1 | Math231/232</h2>
+          <h3 class="class-description"><span class="span-yellow">Medium</span> | <span class="span-green">4 hours/week</span></h3>
+            <h4 class="proffesor border-top">Professor: Talman</h4>
+            <p>Hard material and tests but does not have any super intensive and time consuming homeworks like most CS classes.</p>
+          <div class="d-flex justify-content-between border-top">
+            <h5 class="prereqs m-2">Prerequisites: None</h5>
+            <a class="link m-1">Syllabus</a>
+        </div>
+      </div>
+  </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

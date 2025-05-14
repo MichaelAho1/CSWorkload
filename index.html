@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Workload</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./styles/homePage.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #E6D8AD;
+      }
+      .navbar-brand {
+        font-size: 2.5rem;
+      }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">CS Workload</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="grad_planner.html">Graduation Planner</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="class_desc.html">Class Information</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <header>
+      <h1 id="title">What do you want to do after College?</h1>
+    </header>
+    <div class="cards">
+    <section>
+      <div class="card bg-dark text-white d-flex flex-column h-90">
+        <img src="img/MachineLearning.png" class="card-img" alt="Machine Learning Concepts">
+        <div class="card-img-overlay">
+          <h2 class="card-title">Machine Learning</h2>
+        </div>
+        <div class="description flex-grow-1">
+          <p>
+            Works at the intersection of software engineering and data science to build systems that learn from data and make predictions or decisions.
+            Some of the most popular technologies used are Python, TensorFlow, PyTorch, and Jupyter Notebooks.
+          </p>
+          <h3>Relevant JMU Classes</h3>
+          <p>Data Structures and Algorithms(CS 240), Machine Learning(CS445), Artificial Intelligence(CS 444), Introduction to Autonomous Robotics(CS 354)</p>
+          <div class="footer d-flex align-items-center mt-auto">
+            <div class="dropdown me-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select A Location
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Machine Learning', 'Washington DC')">Washington DC</a>
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Machine Learning', 'San Francisco')">San Francisco</a>
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Machine Learning', 'New York')">New York</a>
+              </div>
+            </div>
+            <h4 class="salary mb-2 px-5">Avg. Salary: <span id="Machine">-</span></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card bg-dark text-white d-flex flex-column h-90">
+        <img src="img/GameDeveloper.png" class="card-img" alt="Game Developer Working on a project">
+        <div class="card-img-overlay">
+          <h2 class="card-title">Game Developer</h2>
+        </div>
+        <div class="description d-flex flex-column flex-grow-1">
+          <p>
+            Builds interactive games by combining coding, design, and graphics using game engines to create fun, engaging experiences.
+            Some of the most popular technologies used are Unity, Unreal Engine, C#, C++, and Git/Github.
+          </p>
+          <h3>Relevant JMU Classes</h3>
+          <p>
+            Algorithms and Data Structures(CS 240), Software Engineering(CS345), Computer Systems I(CS 261) and II(CS 361), Developing Interactive Multimedia(CS349)
+          </p>
+          <div class="mt-auto footer d-flex align-items-center">
+            <div class="dropdown me-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select A Location
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Game Developer', 'Washington DC')">Washington DC</a>
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Game Developer', 'San Francisco')">San Francisco</a>
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Game Developer', 'New York')">New York</a>
+              </div>
+            </div>
+            <h4 class="salary mb-2 px-5">Avg. Salary: <span id="Game">-</span></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card bg-dark text-white d-flex flex-column h-90">
+        <img src="img/SoftwareEngineer.png" class="card-img" alt="Software Engineer coding">
+        <div class="card-img-overlay">
+          <h2 class="card-title">Software Engineer</h2>
+        </div>
+        <div class="description d-flex flex-column flex-grow-1">
+          <p>
+            Designs, builds, and maintains software systems by applying engineering principles to solve problems and create reliable, scalable applications.
+            Some of the most popular technologies are JavaScript/React.js, Python, Git/Github, and Docker.
+          </p>
+          <h3>Relevant JMU Classes</h3>
+          <p>Algorithms and Data Structures(CS 240), App Development(CS 343), Web Development(CS 347), Applied Algorithms(CS 412), Software Engineering(CS 345)</p>
+          <div class="footer d-flex align-items-center mt-auto">
+            <div class="dropdown me-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select A Location
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Software Engineer', 'Washington DC')">Washington DC</a>
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Software Engineer', 'San Francisco')">San Francisco</a>
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Software Engineer', 'New York')">New York</a>
+              </div>
+            </div>
+            <h4 class="salary mb-2 px-5">Avg. Salary: <span id="Software">-</span></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card bg-dark text-white d-flex flex-column h-90">
+        <img src="img/CyberSecurity.png" class="card-img" alt="Cyber Security Engineer Working">
+        <div class="card-img-overlay">
+          <h2 class="card-title">Cybersecurity</h2>
+        </div>
+        <div class="description d-flex flex-column flex-grow-1">
+          <p>
+            Designs, builds, and maintains software systems by applying engineering principles to solve problems and create reliable, scalable applications.
+            Some of the most popular concepts are FireWalls, Encryption, SIEM, Endpoint Protection, and VPNs.
+          </p>
+          <h3>Relevant JMU Classes</h3>
+          <p>Information Security(CS 457), Cyber Defense(CS458), Cryptography(CS 482)</p>
+          <div class="footer d-flex align-items-center mt-auto">
+            <div class="dropdown me-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select A Location
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Cybersecurity Engineer', 'Washington DC')">Washington DC</a>
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Cybersecurity Engineer', 'San Francisco')">San Francisco</a>
+                <a class="dropdown-item" onclick="handleLocationClick(this, 'Cybersecurity Engineer', 'New York')">New York</a>
+              </div>
+            </div>
+            <h4 class="salary mb-2 px-5">Avg. Salary: <span id="Cybersecurity">-</span></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </main>
+  <script src="script/homePage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
