@@ -5,7 +5,7 @@ async function getEstimatedSalary(job, location) {
     const options = {
       method: 'GET',
       headers: {
-        'x-rapidapi-key': 'ddb3fcec53msh88e103a07bcb32cp1ccf2bjsn9ecc01b01498',
+        'x-rapidapi-key': 'ddb3fcec53msh88e103a07bcb32cp1ccf2bjsn9ecc01b01498', // Free API key (Would be hidden in an env file if in a Vite project or project with a backend)
         'x-rapidapi-host': 'jsearch.p.rapidapi.com'
       }
     };
