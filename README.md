@@ -1,17 +1,17 @@
 # CS Workload
 
-A browser-based graduation planning tool for JMU Computer Science majors. It models your remaining coursework against prerequisite chains, difficulty weights, and preferred semester load — then outputs an optimized multi-semester schedule you can export. No backend, no install, just open and plan.
+A browser-based graduation planning tool for JMU Computer Science majors. It models your remaining coursework against prerequisite chains, difficulty weights, and preferred semester load - then outputs an optimized multi-semester schedule you can export. No backend, no install, just open and plan.
 
 ---
 
 ## Key Features
 
-- **Prerequisite-aware scheduling** — the planner validates every generated plan against the full prerequisite graph and automatically reschedules conflicts across semesters
-- **Difficulty balancing** — each class carries a numeric difficulty rating (1–10); the algorithm caps per-semester difficulty totals to prevent burnout-inducing schedules
-- **Career path explorer** — maps four CS career tracks (Machine Learning, Game Development, Software Engineering, Cybersecurity) to their relevant JMU courses with live salary data per location
-- **Real-time salary lookup** — integrates the JSearch RapidAPI to show estimated salary ranges (min/max) for each career path by metro area
-- **Persistent state** — completed classes are stored in `localStorage`, so your progress survives page refreshes without any login or account
-- **JSON export** — generates and downloads a structured `gradPlan.json` so you can save, share, or import your plan elsewhere
+- **Prerequisite-aware scheduling** - the planner validates every generated plan against the full prerequisite graph and automatically reschedules conflicts across semesters
+- **Difficulty balancing** - each class carries a numeric difficulty rating (1–10); the algorithm caps per-semester difficulty totals to prevent burnout-inducing schedules
+- **Career path explorer** - maps four CS career tracks (Machine Learning, Game Development, Software Engineering, Cybersecurity) to their relevant JMU courses with live salary data per location
+- **Real-time salary lookup** - integrates the JSearch RapidAPI to show estimated salary ranges (min/max) for each career path by metro area
+- **Persistent state** - completed classes are stored in `localStorage`, so your progress survives page refreshes without any login or account
+- **JSON export** - generates and downloads a structured `gradPlan.json` so you can save, share, or import your plan elsewhere
 
 ---
 
@@ -19,13 +19,13 @@ A browser-based graduation planning tool for JMU Computer Science majors. It mod
 
 | Technology | Role |
 |---|---|
-| **Vanilla JavaScript (ES6)** | Core application logic — no framework overhead for a static, algorithmic tool |
+| **Vanilla JavaScript (ES6)** | Core application logic - no framework overhead for a static, algorithmic tool |
 | **Bootstrap 4.5** | Responsive grid and modal system; avoids writing boilerplate layout CSS |
 | **jQuery 3.5** | DOM traversal and event handling for the class selection tables and modals |
 | **Browser LocalStorage** | Zero-infrastructure persistence for completed classes across sessions |
 | **Fetch API** | Native HTTP client for the salary estimation API call |
 | **JSearch (RapidAPI)** | Provides real-world salary range data by job title and location |
-| **VS Code Live Server** | Local development server on port 5501 — no build step required |
+| **VS Code Live Server** | Local development server on port 5501 - no build step required |
 
 ---
 
@@ -52,7 +52,7 @@ Data flows entirely client-side: the user's completed classes live in `localStor
 ### Prerequisites
 
 - A modern browser (Chrome, Firefox, Edge, Safari)
-- [VS Code](https://code.visualstudio.com/) with the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension — **or** any static file server
+- [VS Code](https://code.visualstudio.com/) with the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension - **or** any static file server
 
 ### Run Locally
 
@@ -93,21 +93,6 @@ The salary lookup on the home page uses [JSearch via RapidAPI](https://rapidapi.
 
 ---
 
-## Screenshots
-
-### Home Page — Career Paths & Salary Lookup
-![Home Page](img/screenshot-home.png)
-
-### Graduation Planner — Class Selection
-![Graduation Planner](img/screenshot-planner.png)
-
-### Generated Schedule
-![Generated Schedule](img/screenshot-schedule.png)
-
-> _Screenshots above are placeholders. Run the app locally to see the live UI._
-
----
-
 ## API Reference
 
 ### JSearch — Estimated Salary
@@ -140,15 +125,8 @@ The salary lookup on the home page uses [JSearch via RapidAPI](https://rapidapi.
 
 ---
 
-## Engineering Notes
-
-The core challenge in this project was building a scheduler that respects an arbitrary prerequisite DAG while also honoring user constraints (semester count, classes per semester) and difficulty limits. A naive topological sort produces a valid ordering but ignores load balancing — so the algorithm runs in three passes: priority sort, greedy bin-packing by difficulty, then a prerequisite-conflict repair pass that scans each generated semester and pushes violating courses forward. This repair loop can create new semesters beyond the user's target, which is surfaced to the user rather than silently discarded.
-
----
-
 ## Contact
 
 **Michael Aho**
 - GitHub: [@MichaelAho1](https://github.com/MichaelAho1)
 - LinkedIn: [linkedin.com/in/michaelaho](https://linkedin.com/in/michaelaho)
-- Portfolio: _Coming soon_
